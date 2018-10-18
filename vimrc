@@ -17,6 +17,11 @@ Plugin 'tmhedberg/SimpylFold'
     let g:SimpylFold_docstring_preview=1
 " 自动补全    
 Plugin 'Valloric/YouCompleteMe'
+    let g:ycn_complete_in_comments=1
+    let g:ycm_collect_identifiers_from_tags_files=1
+    let g:ycm_min_num_of_chars_for_completion=1
+    let g:ycm_cache_omnifunc=0
+    let g:ycm_seed_identifiers_with_syntax=1
     "let g:
 " 语法检查
 Plugin 'scrooloose/syntastic'
@@ -26,12 +31,12 @@ Plugin 'scrooloose/syntastic'
 
     let g:syntastic_always_populate_loc_list = 1
     let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
+"    let g:syntastic_check_on_open = 1
     let g:syntastic_check_wq = 0 
 Plugin 'nvie/vim-flake8'
 " color
 Plugin 'altercation/vim-colors-solarized'
-"    let g:solarized_termcolors=256
+    let g:solarized_termcolors=256
 " file tree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -59,15 +64,19 @@ set autoindent
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 syntax on
 " 插件配置
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 let python_highlight_all=1
 call togglebg#map("<F5>")
+highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
+highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
 " code folding
 set foldmethod=indent
 set foldlevel=99
 set nofoldenable
 " color
 set background=dark
+colorscheme solarized
 " PEP8
 au BufNewFile,BufRead *.py
 			\set textwidth=79
+
