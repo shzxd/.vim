@@ -45,14 +45,17 @@ Plugin 'ctrlpvim/ctrlp.vim'
 "git
 Plugin 'tpope/vim-fugitive'
 " 状态栏
-Plugin 'powerline/powerline'
-    let g:Powerline_colorscheme='solarized256'
+"Plugin 'powerline/powerline'
+"    set laststatus=2
+"    let g:Powerline_colorscheme='solarized256'
+"    let g:Powerline_symbols='unicode'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " basic
 set nu
+set ruler
 set incsearch
 set wildmenu
 set encoding=utf-8
@@ -69,6 +72,7 @@ let python_highlight_all=1
 call togglebg#map("<F2>")
 highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
 highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
+
 " code folding
 set foldmethod=indent
 set foldlevel=99
