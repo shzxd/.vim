@@ -66,7 +66,7 @@ syntax on
 " 插件配置
 "autocmd BufWritePost *.py call Flake8()
 let python_highlight_all=1
-call togglebg#map("<F5>")
+call togglebg#map("<F2>")
 highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
 highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
 " code folding
@@ -76,7 +76,9 @@ set nofoldenable
 " color
 set background=dark
 colorscheme solarized
+"Python
+nnoremap <buffer> <F5> :exec '!python3' shellescape(@%, 1)<cr>
 " PEP8
 au BufNewFile,BufRead *.py
 			\set textwidth=79
-
+            \set colorcolumn=80
