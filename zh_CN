@@ -1,0 +1,4 @@
+vi /etc/man_db.conf
+:%s/\/usr\/share\/man/usr\/share\/man\/zh_CN/c
+
+vimtutor zh_CN
