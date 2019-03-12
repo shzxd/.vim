@@ -34,15 +34,17 @@ Plugin 'scrooloose/syntastic'
 "    let g:syntastic_check_on_open = 1
     let g:syntastic_check_wq = 0 
 Plugin 'nvie/vim-flake8'
-" color
+" 自动运行flake8检查
+"   autocmd BufWritePost *.py call Flake8()
+" 配色
 Plugin 'altercation/vim-colors-solarized'
     let g:solarized_termcolors=256
-" file tree
+" 树结构的文件浏览
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-" super search
+" 超级搜索，按Ctrl+P进行搜索
 Plugin 'ctrlpvim/ctrlp.vim'
-"git
+" git插件
 Plugin 'tpope/vim-fugitive'
 " 状态栏
 "Plugin 'powerline/powerline'
@@ -53,7 +55,7 @@ Plugin 'tpope/vim-fugitive'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" basic
+" 基本设置
 set nu
 set ruler
 set incsearch
@@ -67,22 +69,22 @@ set autoindent
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 syntax on
 " 插件配置
-"autocmd BufWritePost *.py call Flake8()
 let python_highlight_all=1
-call togglebg#map("<F2>")
 highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
 highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
 
-" code folding
+" 代码折叠
 set foldmethod=indent
 set foldlevel=99
 set nofoldenable
-" color
+" 配色方案，F2切换亮暗色调主题 
 set background=dark
 colorscheme solarized
-"Python
+call togglebg#map("<F2>")
+" Python设置
+" 按F5运行当前编辑的Python脚本
 nnoremap <buffer> <F5> :exec '!python3' shellescape(@%, 1)<cr>
-" PEP8
+    " PEP8
 au BufNewFile,BufRead *.py
 			\set textwidth=79
             \set colorcolumn=80
