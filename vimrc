@@ -66,6 +66,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
+set mouse=a " 启用鼠标支持
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 syntax on
 " 插件配置
