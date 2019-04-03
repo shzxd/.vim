@@ -58,6 +58,7 @@ filetype plugin indent on    " required
 " 基本设置
 set nu
 set ruler
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P " 启用标准状态栏
 set incsearch
 set wildmenu
 set encoding=utf-8
