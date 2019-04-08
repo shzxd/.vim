@@ -38,7 +38,8 @@ Plugin 'nvie/vim-flake8'
 "   autocmd BufWritePost *.py call Flake8()
 " 配色
 Plugin 'altercation/vim-colors-solarized'
-    let g:solarized_termcolors=256
+    let g:solarized_termcolors=256 " 终端中不使用solarized配色方案，vim中使用solarized时，开启此选项
+    let g:solarized_visibility="high" " 在:set list后，高亮特殊字符
 " 树结构的文件浏览
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -47,10 +48,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " git插件
 Plugin 'tpope/vim-fugitive'
 " 状态栏
-"Plugin 'powerline/powerline'
-"    set laststatus=2
-"    let g:Powerline_colorscheme='solarized256'
-"    let g:Powerline_symbols='unicode'
+" Plugin 'powerline/powerline'
+"     set laststatus=2
+"     let g:Powerline_colorscheme='solarized256'
+"     let g:Powerline_symbols='unicode'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
