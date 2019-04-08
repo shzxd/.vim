@@ -6,3 +6,5 @@
     1. 在Vundle插件目录（~/.vim/bundle/）运行`git clone https://github.com/Valloric/YouCompleteMe.git`
     2. 进入YouCompleteMe仓库目录，运行`git submodule update --init --recursive`
     3. 运行`python3 install.py`（不支持C系语言的安装）
+## TODO
+- [ ] airline配置
