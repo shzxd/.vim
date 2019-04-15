@@ -1,6 +1,7 @@
 set nocompatible              " required
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -28,14 +29,18 @@ Plugin 'scrooloose/syntastic'
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
-
-    let g:syntastic_always_populate_loc_list = 1
+" 置1表示总是打开quickfix
+    let g:syntastic_always_populate_loc_list = 0
+" 1表示自动打开/关闭，2表示不自动打开没有错误时自动关闭，3表示自动打开不自动关闭，0表示关闭自动
     let g:syntastic_auto_loc_list = 1
 "    let g:syntastic_check_on_open = 1
     let g:syntastic_check_wq = 0 
 Plugin 'nvie/vim-flake8'
 " 自动运行flake8检查
 "   autocmd BufWritePost *.py call Flake8()
+" 不显示quickfix窗口
+"   let g:flake8_show_quickfix=0
+"   let g:flake8_show_in_gutter=1
 " 配色
 Plugin 'altercation/vim-colors-solarized'
     let g:solarized_termcolors=256 " 终端中不使用solarized配色方案，vim中使用solarized时，开启此选项
