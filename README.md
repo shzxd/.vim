@@ -1,3 +1,11 @@
+# vim编译安装
+1. [这里是详细步骤](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
+2. 注意适配自己的场景
+    ```  
+        --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \
+        --with-python3-command=python3.5 \
+        --enable-gui=gnome2 \
+    ```
 # vim配置文件
 1. 安装Vundle(Vim bundle)`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 2. 启动Vim并运行`:PluginInstall`
