@@ -6,6 +6,9 @@
         --with-python3-command=python3.5 \
         --enable-gui=gnome2 \
     ```
+3. 使用checkinstall安装，可方便卸载，卸载使用`dpkg -r vim`
+4. 使用`sudo apt-mark hold vim`，来设置不自动升级vim软件包
+    - vim-runtime也可以加上（未知行为，自用）
 # 使用vim配置文件
 1. $HOME目录下克隆本仓库，`git clone https://github.com/shzxd/.vim.git`
 2. 安装Vundle(Vim bundle)`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
