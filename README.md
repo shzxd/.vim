@@ -10,7 +10,7 @@
 4. 使用`sudo apt-mark hold vim`，来设置不自动升级vim软件包
     - vim-runtime也可以加上（未知行为，自用）
 # 使用vim配置文件
-1. $HOME目录下克隆本仓库，`git clone https://github.com/shzxd/.vim.git`
+1. $HOME目录下克隆本仓库，`git clone https://github.com/shzxd/.vim.git ~/.vim`
 2. 安装Vundle(Vim bundle)`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 3. 先安装YouCompleteMe
     1. 在Vundle插件目录（~/.vim/bundle/）运行`git clone https://github.com/Valloric/YouCompleteMe.git`
