@@ -23,7 +23,6 @@ Plugin 'Valloric/YouCompleteMe'
     let g:ycm_min_num_of_chars_for_completion=1
     let g:ycm_cache_omnifunc=0
     let g:ycm_seed_identifiers_with_syntax=1
-    "let g:
 " 语法检查
 Plugin 'scrooloose/syntastic'
     set statusline+=%#warningmsg#
@@ -76,6 +75,7 @@ set expandtab
 set autoindent
 set mouse=a " 启用鼠标支持
 set backspace=indent,eol,start " 增强退格键，Allow backspacing over everything in insert mode
+set guifont=Courier\ 10\ Pitch\ 14 " 设置GUI界面字体为Courier 10 Pitch的14号字体
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 syntax on
 " 插件配置
