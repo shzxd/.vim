@@ -76,6 +76,7 @@ set autoindent
 set mouse=a " 启用鼠标支持
 set backspace=indent,eol,start " 增强退格键，Allow backspacing over everything in insert mode
 set guifont=Courier\ 10\ Pitch\ 14 " 设置GUI界面字体为Courier 10 Pitch的14号字体
+set showmatch
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 syntax on
 " 插件配置
