@@ -1,11 +1,18 @@
 # vim编译安装
 1. [这里是详细步骤](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
 2. 注意适配自己的场景
-    ```  
-        --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \
-        --with-python3-command=python3.5 \
-        --enable-gui=gnome2 \
-    ```
+```sh
+./configure --with-features=huge \
+            --enable-multibyte \
+	    --enable-rubyinterp=yes \
+	    --enable-python3interp=yes \
+	    --with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu \
+	    --with-python3-command=python3.7 \
+	    --enable-perlinterp=yes \
+	    --enable-luainterp=yes \
+            --enable-gui=gtk3 \
+            --enable-cscope
+```
 3. 使用checkinstall安装，可方便卸载，卸载使用`dpkg -r vim`
 4. 使用`sudo apt-mark hold vim`，来设置不自动升级vim软件包
     - vim-runtime也可以加上（未知行为，自用）
