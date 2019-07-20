@@ -12,6 +12,7 @@
 	    --enable-luainterp=yes \
             --enable-gui=gtk3 \
             --enable-cscope
+make -j32 VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 ```
 3. 使用checkinstall安装，可方便卸载，卸载使用`dpkg -r vim`
 4. 使用`sudo apt-mark hold vim`，来设置不自动升级vim软件包
