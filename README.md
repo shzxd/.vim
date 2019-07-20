@@ -10,7 +10,7 @@
 	    --with-python3-command=python3.7 \
 	    --enable-perlinterp=yes \
 	    --enable-luainterp=yes \
-            --enable-gui=gtk3 \
+            --enable-gui=gtk2 \
             --enable-cscope
 make -j32 VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 ```
