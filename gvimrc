@@ -1,0 +1,56 @@
+"Windows gvim 配置文件
+set nocompatible              " required
+filetype off                  " required
+
+
+" set the runtime path to include Vundle and initialize
+" vim中运行:echo $VIM查看具体目录
+"set rtp+=$VIM/vimfiles/bundle/Vundle.vim/
+"call vundle#begin('$VIM/vimfiles/bundle')
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)   
+"NERDTree
+"Plugin 'scrooloose/nerdtree'
+autocmd vimenter * NERDTree F:\
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+"超级搜索，Ctrl-p
+"Plugin 'ctrlpvim/ctrlp.vim'
+
+" 配色插件
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'altercation/vim-colors-solarized'
+"    let g:solarized_termcolors=256 " 终端中不使用solarized配色方案，vim中使用solarized时，开启此选项
+"    let g:solarized_visibility="high" " 在:set list后，高亮特殊字符
+syntax enable
+set background=dark
+colorscheme solarized
+call togglebg#map("<F2>")
+" 基本设置
+cd F:\
+set directory=~/vimtmp/
+set backupdir=~/vimtmp/
+set undodir=~/vimtmp/
+set nu
+set hlsearch
+set ruler
+set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+"set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P " 启用标准状态栏
+set incsearch
+set wildmenu
+set encoding=utf-8
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set mouse=a " 启用鼠标支持
+set backspace=indent,eol,start " 增强退格键，Allow backspacing over everything in insert mode
+set guifont=Courier_New:h14 " 设置GUI界面字体为Courier 10 Pitch的14号字体
+set showmatch
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+syntax on
