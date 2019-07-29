@@ -29,3 +29,5 @@ make -j32 VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 
 ## TODO
 - [ ] airline配置
+- [ ] vimtex
+- [ ] utlisnips
