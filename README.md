@@ -17,7 +17,7 @@ make -j32 VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 3. 使用checkinstall安装，可方便卸载，卸载使用`dpkg -r vim`
 4. 使用`sudo apt-mark hold vim`，来设置不自动升级vim软件包
     - vim-runtime也可以加上（未知行为，自用）
-# 使用vim配置文件
+# 使用这份vim配置文件
 1. $HOME目录下克隆本仓库，`git clone https://github.com/shzxd/.vim.git ~/.vim`
 2. 安装Vundle(Vim bundle)`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 3. 先安装YouCompleteMe
@@ -25,9 +25,21 @@ make -j32 VIMRUNTIMEDIR=/usr/local/share/vim/vim81
     2. 进入YouCompleteMe仓库目录，运行`git submodule update --init --recursive`
     3. 运行`python3 install.py`（不支持C系语言的安装）
 4. 启动Vim并运行`:PluginInstall`
+# 所使用的插件
+1. 插件管理Vundle
+2. 代码折叠SimpyFlod
+3. 自动补全YouCompleteMe
+4. 语法检查syntastic
+5. vim-flake8
+6. 配色vim-colors-solarized
+7. 文件浏览nerdtree
+8. 超级搜索ctrlp
+9. git插件vim-flugitive
+10. LaTex插件vimtex
 ## 其它问题
 
 ## TODO
 - [ ] airline配置
-- [ ] vimtex
+- [x] vimtex
 - [ ] ultisnips
+- [ ] Markdown支持
