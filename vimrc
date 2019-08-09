@@ -46,6 +46,8 @@ Plugin 'altercation/vim-colors-solarized'
     let g:solarized_visibility="high" " 在:set list后，高亮特殊字符
 " 树结构的文件浏览
 Plugin 'scrooloose/nerdtree'
+    let g:NERDTreeWinSize=20
+    let g:NERDTreeShowLineNumbers=1
 Plugin 'jistr/vim-nerdtree-tabs'
 " 超级搜索，按Ctrl+P进行搜索
 Plugin 'ctrlpvim/ctrlp.vim'
