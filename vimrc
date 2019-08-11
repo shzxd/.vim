@@ -53,12 +53,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'ctrlpvim/ctrlp.vim'
 " git插件
 Plugin 'tpope/vim-fugitive'
-" 状态栏
-" Plugin 'powerline/powerline'
-"     set laststatus=2
-"     let g:Powerline_colorscheme='solarized256'
-"     let g:Powerline_symbols='unicode'
-" LaTeX
+" LaTeX插件
 Plugin 'lervag/vimtex'
 let g:tex_flavor='latex'
 " let g:vimtex_view_method=''
