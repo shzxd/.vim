@@ -23,6 +23,12 @@ Plugin 'Valloric/YouCompleteMe'
     let g:ycm_min_num_of_chars_for_completion=1
     let g:ycm_cache_omnifunc=0
     let g:ycm_seed_identifiers_with_syntax=1
+    " LaTex支持
+    if !exists('g:ycm_semantic_triggers')
+      let g:ycm_semantic_triggers = {}
+    endif
+    au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
+
 " 语法检查
 Plugin 'scrooloose/syntastic'
     set statusline+=%#warningmsg#
@@ -88,6 +94,11 @@ set guifont=Courier\ 10\ Pitch\ 14 " 设置GUI界面字体为Courier 10 Pitch的
 set showmatch
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 syntax on
+" 按键映射
+    nnoremap j gj
+    nnoremap k gk
+    vnoremap j gj
+    vnoremap k gk
 " 插件配置
 let python_highlight_all=1
 highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
