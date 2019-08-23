@@ -94,6 +94,8 @@ set guifont=Courier\ 10\ Pitch\ 14 " 设置GUI界面字体为Courier 10 Pitch的
 set showmatch
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 syntax on
+" PuTTY远程连接时启用256色配置，以支持配色方案
+set t_Co=256
 " 按键映射
     nnoremap j gj
     nnoremap k gk
