@@ -18,7 +18,8 @@ Plugin 'tmhedberg/SimpylFold'
     let g:SimpylFold_docstring_preview=1
 " 自动补全    
 Plugin 'Valloric/YouCompleteMe'
-    let g:ycn_complete_in_comments=1
+    let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+    let g:ycm_complete_in_comments=1
     let g:ycm_collect_identifiers_from_tags_files=1
     let g:ycm_min_num_of_chars_for_completion=1
     let g:ycm_cache_omnifunc=0
