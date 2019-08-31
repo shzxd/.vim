@@ -39,7 +39,6 @@ make -j32 VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 ## 其它问题
 
 ## TODO
-- [ ] airline配置
-- [x] vimtex
+- [ ] statusline高亮配色
 - [ ] ultisnips
 - [ ] Markdown支持
