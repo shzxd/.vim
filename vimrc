@@ -80,11 +80,13 @@ filetype plugin indent on    " required
 set nu
 set hlsearch
 set ruler
-set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ [%{&ff},%{&fileencoding?&fileencoding:&encoding}]%y\ %P " 启用标准状态栏
+set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ [%{&ff},%{&fileencoding?&fileencoding:&fileencoding}]%y\ %P " 启用标准状态栏
 set laststatus=2
 set incsearch
 set wildmenu
-set encoding=utf-8
+set encoding=utf-8 "vim内部编码，勿随意修改
+set fileencodings=utf-8,gb2312,gb18030,gbk,usc-bom,cp936,latin1
+set fencs=utf8,gbk,gb2312,gb18030
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -118,7 +120,7 @@ colorscheme solarized
 call togglebg#map("<F2>")
 " Python设置
 " 按F5运行当前编辑的Python脚本
-nnoremap <buffer> <F5> :exec '!python3' shellescape(@%, 1)<cr>
+nnoremap <buffer> <F6> :exec '!python3' shellescape(@%, 1)<cr>
     " PEP8
 au BufNewFile,BufRead *.py
 			\set textwidth=79
