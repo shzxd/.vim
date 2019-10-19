@@ -120,7 +120,7 @@ set background=dark
 colorscheme solarized
 call togglebg#map("<F5>") " 插件默认即为F5切换背景，不知为何需要手动配置
 " Python设置
-" 按F5运行当前编辑的Python脚本
+" 按F6运行当前编辑的Python脚本
 nnoremap <buffer> <F6> :exec '!python3' shellescape(@%, 1)<cr>
     " PEP8
 au BufNewFile,BufRead *.py
