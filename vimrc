@@ -55,6 +55,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
     let g:NERDTreeWinSize=20
     let g:NERDTreeShowLineNumbers=1
+    map <F2> :NERDTreeToggle<CR> " map a specific key to open/close NERDTree
 Plugin 'jistr/vim-nerdtree-tabs'
 " 超级搜索，按Ctrl+P进行搜索
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -114,10 +115,10 @@ highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
 set foldmethod=indent
 set foldlevel=99
 set nofoldenable
-" 配色方案，F2切换亮暗色调主题 
+" 配色方案，F5切换亮暗色调主题 
 set background=dark
 colorscheme solarized
-call togglebg#map("<F2>")
+call togglebg#map("<F5>") " 插件默认即为F5切换背景，不知为何需要手动配置
 " Python设置
 " 按F5运行当前编辑的Python脚本
 nnoremap <buffer> <F6> :exec '!python3' shellescape(@%, 1)<cr>
