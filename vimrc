@@ -116,9 +116,13 @@ set foldmethod=indent
 set foldlevel=99
 set nofoldenable
 " 配色方案，F5切换亮暗色调主题 
-set background=dark
-colorscheme solarized
 call togglebg#map("<F5>") " 插件默认即为F5切换背景，不知为何需要手动配置
+if has('gui_running')
+    colorscheme industry
+else
+    set background=dark
+    colorscheme solarized
+endif
 " Python设置
 " 按F6运行当前编辑的Python脚本
 nnoremap <buffer> <F6> :exec '!python3' shellescape(@%, 1)<cr>
