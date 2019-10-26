@@ -120,7 +120,7 @@ call togglebg#map("<F5>") " 插件默认即为F5切换背景，不知为何需�
 if has('gui_running')
     colorscheme industry
 else
-    set background=dark
+    set background=light
     colorscheme solarized
 endif
 " Python设置
