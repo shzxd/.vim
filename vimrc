@@ -41,6 +41,10 @@ Plugin 'scrooloose/syntastic'
     let g:syntastic_auto_loc_list = 1
 "    let g:syntastic_check_on_open = 1
     let g:syntastic_check_wq = 0 
+" 对指定文件类型使用指定的检查器
+" 格式如下：
+" let g:synastic_<filetype>_checkers=['<check-name>']
+let g:synastic_pyhton_chekers=['pylint']
 Plugin 'nvie/vim-flake8'
 " 自动运行flake8检查
 "   autocmd BufWritePost *.py call Flake8()
