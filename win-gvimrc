@@ -32,6 +32,8 @@ colorscheme solarized
 call togglebg#map("<F2>")
 " 基本设置
 cd F:\
+" E303: Unable to open swap file for "[No Name]", recovery impossible
+" :help E303
 set directory=~/vimtmp/
 set backupdir=~/vimtmp/
 set undodir=~/vimtmp/
