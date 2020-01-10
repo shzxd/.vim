@@ -1,6 +1,6 @@
 # vim编译安装
 1. [这里是详细步骤](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
-2. 注意适配自己的场景
+2. 注意适配自己的场景(以下config配置出来的gvim与平时不太一样，不知是gtk风格还是gnome风格)
 ```sh
 ./configure --enable-fail-if-missing \
 	--with-features=huge \
