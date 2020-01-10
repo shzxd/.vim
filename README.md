@@ -2,16 +2,21 @@
 1. [这里是详细步骤](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
 2. 注意适配自己的场景
 ```sh
-./configure --with-features=huge \
-            --enable-multibyte \
-	    --enable-rubyinterp=yes \
-	    --enable-python3interp=yes \
-	    --with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu \
-	    --with-python3-command=python3.7 \
-	    --enable-perlinterp=yes \
-	    --enable-luainterp=yes \
-            --enable-gui=gtk2 \
-            --enable-cscope
+./configure --enable-fail-if-missing \
+	--with-features=huge \
+        --enable-multibyte \
+	--enable-rubyinterp=yes \
+	--enable-python3interp=yes \
+	--with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu \
+	--with-python3-command=python3.7 \
+	--enable-perlinterp=yes \
+	--enable-luainterp=yes \
+	--enable-gui=auto\
+        --enable-gtk2-check \
+	--enable-gnome-check \
+        --enable-cscope \
+	--enable-fontset \
+	--with-x
 make -j32 VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 ```
 3. 使用checkinstall安装，可方便卸载，卸载使用`dpkg -r vim`
