@@ -86,12 +86,14 @@ set nu
 set hlsearch
 set ruler
 set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ [%{&ff},%{&fileencoding?&fileencoding:&fileencoding}]%y\ %P " 启用标准状态栏
+"set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ [%{&ff},%{&fileencoding?&fileencoding:&fileencoding}]%y\ %b,%B\ %P "
 set laststatus=2
 set incsearch
 set wildmenu
-set encoding=utf-8 "vim内部编码，勿随意修改
-set fileencodings=utf-8,gb2312,gb18030,gbk,usc-bom,cp936,latin1
-set fencs=utf8,gbk,gb2312,gb18030
+" todo: 此处编码问题已搞清，待整理
+"set encoding=utf-8 "vim内部编码，勿随意修改
+"set fileencodings=utf-8,gb2312,gb18030,gbk,usc-bom,cp936,latin1
+"set fencs=utf8,gbk,gb2312,gb18030
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
