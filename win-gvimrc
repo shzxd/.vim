@@ -1,3 +1,6 @@
+"如设置不起作用，须在更上层配置中设置
+"language en
+
 "Windows gvim 配置文件
 set nocompatible              " required
 filetype off                  " required
@@ -40,11 +43,11 @@ set undodir=~/vimtmp/
 set nu
 set hlsearch
 set ruler
-set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)[%{&ff},%{&fileencoding!=''?&fileencoding:&encoding},%{&bomb?\"BOM\":\"\"}]%y\ %b,%B\ %P
 "set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P " 启用标准状态栏
 set incsearch
 set wildmenu
-set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,default,latin1
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
