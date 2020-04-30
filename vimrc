@@ -85,8 +85,8 @@ filetype plugin indent on    " required
 set nu
 set hlsearch
 set ruler
-set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ [%{&ff},%{&fileencoding?&fileencoding:&fileencoding}]%y\ %P " 启用标准状态栏
-"set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ [%{&ff},%{&fileencoding?&fileencoding:&fileencoding}]%y\ %b,%B\ %P "
+set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ [%{&ff},%{&fileencoding!=''?&fileencoding:&encoding}]%y\ %P
+"set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ [%{&ff},%{&fileencoding!=''?&fileencoding:&encoding}}]%y\ %b,%B\ %P
 set laststatus=2
 set incsearch
 set wildmenu
