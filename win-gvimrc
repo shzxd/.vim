@@ -43,6 +43,8 @@ set undodir=~/vimtmp/
 set nu
 set hlsearch
 set ruler
+" To display the status line always
+set laststatus=2
 set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)[%{&ff},%{&fileencoding!=''?&fileencoding:&encoding},%{&bomb?\"BOM\":\"\"}]%y\ %b,%B\ %P
 "set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P " 启用标准状态栏
 set incsearch
